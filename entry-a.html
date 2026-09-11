@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Трикрон — Входная A (инженерный тёмный)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#10161A; --bg2:#171F24; --bg3:#1C252B;
+    --ink:#F3F6F5; --ink2:#A9B6B4; --ink3:#8B9895;
+    --line:#2A3439;
+    --t1:#34D1B4; --t2:#2E86E0;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Golos Text",system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+  a{color:var(--t1);text-decoration:none}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+  .gradtext{background:linear-gradient(135deg,var(--t1),var(--t2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:2px;font-weight:600;font-size:14px;cursor:pointer;border:1px solid transparent}
+  .btn-primary{background:linear-gradient(135deg,var(--t1),var(--t2));color:#0A1012}
+  .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--t1);font-weight:600}
+
+  .tile{position:relative;background:var(--bg2);overflow:hidden;padding:28px;display:flex;flex-direction:column;justify-content:space-between}
+  .tile .arrow{position:absolute;top:26px;right:26px;opacity:.5;transition:opacity .2s,transform .2s}
+  .tile:hover .arrow{opacity:1;transform:translate(3px,-3px)}
+
+  .state{transition:opacity .25s ease}
+  .state-default{opacity:1}
+  .tile:hover .state-default{opacity:0}
+  .state-hover{position:absolute;inset:0;display:flex;align-items:center;opacity:0;pointer-events:none}
+  .tile:hover .state-hover{opacity:1}
+
+  .marquee{display:flex;white-space:nowrap;animation:scroll 12s linear infinite}
+  .marquee span{padding:0 28px;font-size:22px;font-weight:700;letter-spacing:.01em}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  .hint{position:absolute;bottom:14px;right:18px;font-size:11px;color:var(--ink3);opacity:.85;display:flex;align-items:center;gap:6px}
+</style>
+<style>body{margin:0}</style>
+</head>
+<body>
+<div style="width:1440px;background:var(--bg);position:relative">
+
+  <!-- HEADER -->
+  <div style="padding:30px 0" class="wrap">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="mark_trikron.png" alt="Трикрон" style="height:32px;width:auto;display:block">
+        <span style="font-weight:800;font-size:18px;letter-spacing:.02em">ТРИКРОН</span>
+      </div>
+      <div class="btn btn-primary">Обсудить проект</div>
+    </div>
+  </div>
+
+  <!-- COMPACT USP BAND -->
+  <div class="wrap" style="padding:8px 0 40px;display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:24px;border-bottom:1px solid var(--line)">
+    <div style="max-width:640px">
+      <div class="eyebrow">EPCM · Технический заказчик полного цикла</div>
+      <h1 style="font-size:38px;line-height:1.15;font-weight:800;letter-spacing:-.015em;margin:12px 0 0">От идеи до результата</h1>
+      <p style="font-size:15px;line-height:1.5;color:var(--ink2);margin:10px 0 0;max-width:560px">Ведём проект от оценки замысла до ввода объекта — одна ответственная команда вместо цепочки подрядчиков.</p>
+    </div>
+    <div style="display:flex;gap:28px;padding-bottom:4px">
+      <div><div class="gradtext" style="font-size:22px;font-weight:800">2014</div><div style="font-size:11px;color:var(--ink3);margin-top:2px">на рынке с</div></div>
+      <div><div class="gradtext" style="font-size:22px;font-weight:800">500 млн ₽</div><div style="font-size:11px;color:var(--ink3);margin-top:2px">застрахованная ответственность</div></div>
+      <div><div class="gradtext" style="font-size:22px;font-weight:800">2</div><div style="font-size:11px;color:var(--ink3);margin-top:2px">допуска СРО</div></div>
+    </div>
+  </div>
+
+  <!-- 5-BLOCK ENTRY GRID -->
+  <div class="wrap" style="padding:1px 0 0">
+    <div style="display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:340px 230px;gap:1px;background:var(--line)">
+
+      <!-- 1. Наши проекты — shown with a live hover state (mouse over it) -->
+      <div class="tile" style="grid-column:1 / 8;grid-row:1">
+        <div class="state state-default" style="display:flex;flex-direction:column;justify-content:space-between;height:100%">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#34D1B4" stroke-width="1.6"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>
+            <div style="font-weight:800;font-size:30px;letter-spacing:-.01em">Наши проекты</div>
+            <div style="font-size:14px;color:var(--ink2);margin-top:8px;max-width:420px">5 реализованных объектов — от промышленных складов до памятника архитектуры</div>
+          </div>
+        </div>
+        <div class="state state-hover" style="background:var(--bg3)">
+          <div class="marquee">
+            <span class="gradtext">СКЛАДЫ</span><span style="color:var(--ink3)">·</span>
+            <span class="gradtext">ПРОМЫШЛЕННЫЕ ОБЪЕКТЫ</span><span style="color:var(--ink3)">·</span>
+            <span class="gradtext">РЕСТАВРАЦИЯ</span><span style="color:var(--ink3)">·</span>
+            <span class="gradtext">СПОРТИВНЫЕ ОБЪЕКТЫ</span><span style="color:var(--ink3)">·</span>
+            <span class="gradtext">СКЛАДЫ</span><span style="color:var(--ink3)">·</span>
+            <span class="gradtext">ПРОМЫШЛЕННЫЕ ОБЪЕКТЫ</span><span style="color:var(--ink3)">·</span>
+            <span class="gradtext">РЕСТАВРАЦИЯ</span><span style="color:var(--ink3)">·</span>
+            <span class="gradtext">СПОРТИВНЫЕ ОБЪЕКТЫ</span><span style="color:var(--ink3)">·</span>
+          </div>
+        </div>
+        <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="hint">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 9a3 3 0 1 1 4 2.8c-.6.3-1 1-1 1.7v.5M12 17h.01" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          наведите — бегущая строка
+        </div>
+      </div>
+
+      <!-- 2. О нас / Контакты -->
+      <div class="tile" style="grid-column:8 / 13;grid-row:1;background:var(--bg3)">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#2E86E0" stroke-width="1.6"><path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.4"/></svg>
+        <div>
+          <div style="font-weight:800;font-size:24px;letter-spacing:-.01em">О нас / Контакты</div>
+          <div style="font-size:14px;color:var(--ink2);margin-top:8px">Москва, с 2014 года. Приходите с замыслом — до того, как вложены деньги</div>
+          <div style="font-size:13px;color:var(--ink3);margin-top:14px">+7 495 920-11-91 · info@trikron.ru</div>
+        </div>
+        <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+      <!-- 3. Управление проектами в строительстве -->
+      <div class="tile" style="grid-column:1 / 5;grid-row:2">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#34D1B4" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <div style="font-weight:700;font-size:18px;letter-spacing:-.005em">Управление проектами в строительстве</div>
+          <div style="font-size:13px;color:var(--ink2);margin-top:8px">Технический заказчик и проектировщик полного цикла</div>
+        </div>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+      <!-- 4. Наши партнёры -->
+      <div class="tile" style="grid-column:5 / 9;grid-row:2;background:var(--bg3)">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2E86E0" stroke-width="1.6"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="18" r="2.5"/><circle cx="12" cy="6" r="2.5"/><path d="M12 8.5V13M9 15.8l-1.5.7M15 15.8l1.5.7" stroke-linecap="round"/></svg>
+        <div>
+          <div style="font-weight:700;font-size:18px;letter-spacing:-.005em">Наши партнёры</div>
+          <div style="font-size:13px;color:var(--ink2);margin-top:8px">Компетенции, которые не покупаются на стороне под каждый проект</div>
+        </div>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+      <!-- 5. Инфо EPCM -->
+      <div class="tile" style="grid-column:9 / 13;grid-row:2">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#34D1B4" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 8h8M8 12h8M8 16h5" stroke-linecap="round"/></svg>
+        <div>
+          <div style="font-weight:700;font-size:18px;letter-spacing:-.005em">Инфо EPCM</div>
+          <div style="font-size:13px;color:var(--ink2);margin-top:8px">Как устроена модель управления проектированием, поставками и строительством</div>
+        </div>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2"><path d="M7 17L17 7M9 7h8v8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER STRIP -->
+  <div class="wrap" style="display:flex;justify-content:space-between;padding:26px 0;font-size:12px;color:var(--ink3)">
+    <div>ООО «Трикрон-Проект» · Москва, Староконюшенный пер., 10/10</div>
+    <div>trikron.ru</div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Трикрон — направление A</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#10161A; --bg2:#171F24; --bg3:#1C252B;
+    --ink:#F3F6F5; --ink2:#A9B6B4; --ink3:#8B9895;
+    --line:#2A3439;
+    --t1:#34D1B4; --t2:#2E86E0;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Golos Text",system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+  a{color:var(--t1);text-decoration:none}
+  a:hover{color:#5CE3CB}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+  .grad{background:linear-gradient(135deg,var(--t1),var(--t2))}
+  .gradtext{background:linear-gradient(135deg,var(--t1),var(--t2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:2px;font-weight:600;font-size:15px;cursor:pointer;border:1px solid transparent}
+  .btn-primary{background:linear-gradient(135deg,var(--t1),var(--t2));color:#0A1012}
+  .btn-ghost{border-color:var(--line);color:var(--ink)}
+  .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--t1);font-weight:600}
+  .cell{background:var(--bg2);border:1px solid var(--line)}
+</style>
+<style>body{margin:0}</style>
+</head>
+<body>
+<div style="width:1440px;background:var(--bg);position:relative;overflow:hidden">
+
+  <!-- diagonal grid texture -->
+  <svg width="1440" height="2900" style="position:absolute;top:0;left:0;opacity:.5" viewBox="0 0 1440 2900">
+    <defs>
+      <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+        <path d="M0 64L64 0" stroke="#22303380" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect x="0" y="0" width="1440" height="760" fill="url(#grid)"/>
+  </svg>
+
+  <!-- HEADER -->
+  <div style="position:relative;padding:32px 0" class="wrap">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="mark_trikron.png" alt="Трикрон" style="height:34px;width:auto;display:block">
+        <span style="font-weight:800;font-size:19px;letter-spacing:.02em">ТРИКРОН</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:36px">
+        <a href="#" style="color:var(--ink2);font-size:14px" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--ink2)'">Услуги</a>
+        <a href="#" style="color:var(--ink2);font-size:14px" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--ink2)'">Проекты</a>
+        <a href="#" style="color:var(--ink2);font-size:14px" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--ink2)'">О компании</a>
+        <a href="#" style="color:var(--ink2);font-size:14px" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--ink2)'">Контакты</a>
+      </div>
+      <div class="btn btn-primary">Обсудить проект</div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="wrap" style="position:relative;padding:88px 0 64px">
+    <div class="eyebrow">EPCM · Технический заказчик</div>
+    <h1 style="font-size:64px;line-height:1.05;font-weight:800;letter-spacing:-.02em;margin:20px 0 0;max-width:820px">
+      От идеи до результата —<br>без потерь на стыках
+    </h1>
+    <p style="font-size:19px;line-height:1.5;color:var(--ink2);max-width:600px;margin:26px 0 0;font-weight:400">
+      Трикрон — технический заказчик и проектировщик полного цикла. Берём на себя планирование, контроль и ответственность, которые инвестор обычно теряет между проектировщиком, подрядчиком и надзором.
+    </p>
+    <div style="display:flex;gap:16px;margin-top:38px">
+      <div class="btn btn-primary">Обсудить проект</div>
+      <div class="btn btn-ghost">Смотреть проекты</div>
+    </div>
+
+    <div style="display:flex;margin-top:64px;border-top:1px solid var(--line)">
+      <div style="flex:1;padding:18px 0 0;font-size:13px;color:var(--ink3)">01 · Замысел</div>
+      <div style="flex:1;padding:18px 0 0;font-size:13px;color:var(--ink3);border-left:1px solid var(--line);padding-left:16px">02 · Разрешения</div>
+      <div style="flex:1;padding:18px 0 0;font-size:13px;color:var(--ink3);border-left:1px solid var(--line);padding-left:16px">03 · Проектирование</div>
+      <div style="flex:1;padding:18px 0 0;font-size:13px;color:var(--ink3);border-left:1px solid var(--line);padding-left:16px">04 · Стройка</div>
+      <div style="flex:1;padding:18px 0 0;font-size:13px;color:var(--ink3);border-left:1px solid var(--line);padding-left:16px">05 · Ввод</div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="wrap" style="position:relative;padding:8px 0 96px">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)">
+      <div class="cell" style="padding:28px 26px">
+        <div class="gradtext" style="font-size:38px;font-weight:800;letter-spacing:-.02em">2014</div>
+        <div style="font-size:13px;color:var(--ink3);margin-top:8px">на рынке инжиниринга</div>
+      </div>
+      <div class="cell" style="padding:28px 26px">
+        <div class="gradtext" style="font-size:38px;font-weight:800;letter-spacing:-.02em">500 млн ₽</div>
+        <div style="font-size:13px;color:var(--ink3);margin-top:8px">застрахованная профответственность</div>
+      </div>
+      <div class="cell" style="padding:28px 26px">
+        <div class="gradtext" style="font-size:38px;font-weight:800;letter-spacing:-.02em">2</div>
+        <div style="font-size:13px;color:var(--ink3);margin-top:8px">допуска СРО на проектирование и реставрацию</div>
+      </div>
+      <div class="cell" style="padding:28px 26px">
+        <div class="gradtext" style="font-size:38px;font-weight:800;letter-spacing:-.02em">НРС</div>
+        <div style="font-size:13px;color:var(--ink3);margin-top:8px">весь штат в Нацреестре специалистов</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STAGES -->
+  <div class="wrap" style="position:relative;padding-bottom:96px">
+    <div class="eyebrow">Что мы делаем</div>
+    <h2 style="font-size:34px;font-weight:700;letter-spacing:-.01em;margin:14px 0 44px;max-width:640px">Ведём проект на всех этапах жизненного цикла объекта</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)">
+      <div class="cell" style="padding:30px 26px 34px">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#34D1B4" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.5-4.5" stroke-linecap="round"/></svg>
+        <div style="font-weight:700;font-size:17px;margin-top:18px">Инициация</div>
+        <div style="font-size:14px;color:var(--ink2);margin-top:10px;line-height:1.5">Оценка участка, сбор ИРД и техусловий, риски и предварительный бюджет</div>
+      </div>
+      <div class="cell" style="padding:30px 26px 34px">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#34D1B4" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 8h8M8 12h8M8 16h5" stroke-linecap="round"/></svg>
+        <div style="font-weight:700;font-size:17px;margin-top:18px">Проектирование</div>
+        <div style="font-size:14px;color:var(--ink2);margin-top:10px;line-height:1.5">Выбор проектировщиков, график работ, сопровождение экспертизы</div>
+      </div>
+      <div class="cell" style="padding:30px 26px 34px">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#34D1B4" stroke-width="1.6"><path d="M3 21h18M5 21V10l7-6 7 6v11M9 21v-6h6v6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div style="font-weight:700;font-size:17px;margin-top:18px">Строительство</div>
+        <div style="font-size:14px;color:var(--ink2);margin-top:10px;line-height:1.5">Тендеры, договоры с подрядчиками, строительный контроль качества</div>
+      </div>
+      <div class="cell" style="padding:30px 26px 34px">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#34D1B4" stroke-width="1.6"><path d="M4 12l5 5L20 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div style="font-weight:700;font-size:17px;margin-top:18px">Эксплуатация</div>
+        <div style="font-size:14px;color:var(--ink2);margin-top:10px;line-height:1.5">Анализ состояния объекта, ведомость дефектов, требования по эксплуатации</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUST -->
+  <div style="position:relative;background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:72px 0">
+    <div class="wrap">
+      <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start">
+        <div>
+          <div class="eyebrow">Подтверждено</div>
+          <h2 style="font-size:32px;font-weight:700;letter-spacing:-.01em;margin:14px 0 0;max-width:460px">Компетенции, которые проверяются документами, а не словами</h2>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:22px">
+          <div style="display:flex;gap:16px">
+            <div style="width:6px;background:linear-gradient(180deg,var(--t1),var(--t2));border-radius:1px;flex:none"></div>
+            <div><div style="font-weight:600;font-size:15px">СРО «ГлавПроект» и «Архитектурное наследие»</div><div style="font-size:14px;color:var(--ink3);margin-top:4px">допуски на проектирование и реставрацию</div></div>
+          </div>
+          <div style="display:flex;gap:16px">
+            <div style="width:6px;background:linear-gradient(180deg,var(--t1),var(--t2));border-radius:1px;flex:none"></div>
+            <div><div style="font-weight:600;font-size:15px">Профессиональная ответственность застрахована</div><div style="font-size:14px;color:var(--ink3);margin-top:4px">на 500 млн ₽</div></div>
+          </div>
+          <div style="display:flex;gap:16px">
+            <div style="width:6px;background:linear-gradient(180deg,var(--t1),var(--t2));border-radius:1px;flex:none"></div>
+            <div><div style="font-weight:600;font-size:15px">Штат — в Национальном реестре специалистов</div><div style="font-size:14px;color:var(--ink3);margin-top:4px">аттестованные инженеры и ГИПы</div></div>
+          </div>
+          <div style="display:flex;gap:16px">
+            <div style="width:6px;background:linear-gradient(180deg,var(--t1),var(--t2));border-radius:1px;flex:none"></div>
+            <div><div style="font-weight:600;font-size:15px">Собственный парк измерительного оборудования</div><div style="font-size:14px;color:var(--ink3);margin-top:4px">Autodesk, Лира-Сервис, ИСУП ADVANTA</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <div class="wrap" style="position:relative;padding:96px 0">
+    <div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:40px">
+      <div>
+        <div class="eyebrow">Проекты</div>
+        <h2 style="font-size:32px;font-weight:700;letter-spacing:-.01em;margin:14px 0 0">Последние объекты</h2>
+      </div>
+      <a href="#" style="font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px">Все проекты
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line)">
+      <div class="cell" style="padding:28px">
+        <svg width="100%" height="120" viewBox="0 0 400 120"><rect width="400" height="120" fill="#1C252B"/><path d="M40 100V50l50-30 50 30v50M40 70h100M190 100V40h60v60M270 100V60l40-20 40 20v40" stroke="#2E86E0" stroke-width="1.4" fill="none" opacity=".7"/></svg>
+        <div style="display:flex;justify-content:space-between;margin-top:18px">
+          <div style="font-weight:600;font-size:16px">Складской комплекс у/н 49, г.о. Химки</div>
+          <div style="font-size:12px;color:var(--t1)">Промышленные</div>
+        </div>
+        <div style="font-size:13px;color:var(--ink3);margin-top:6px">Технический заказчик, генподряд, генпроектирование</div>
+      </div>
+      <div class="cell" style="padding:28px">
+        <svg width="100%" height="120" viewBox="0 0 400 120"><rect width="400" height="120" fill="#1C252B"/><path d="M60 100V30l100-10 100 10v70M60 60h200" stroke="#34D1B4" stroke-width="1.4" fill="none" opacity=".7"/></svg>
+        <div style="display:flex;justify-content:space-between;margin-top:18px">
+          <div style="font-weight:600;font-size:16px">Гребной клуб «Спарта», Москва</div>
+          <div style="font-size:12px;color:var(--t1)">Спортивные</div>
+        </div>
+        <div style="font-size:13px;color:var(--ink3);margin-top:6px">Технический заказчик</div>
+      </div>
+      <div class="cell" style="padding:28px">
+        <svg width="100%" height="120" viewBox="0 0 400 120"><rect width="400" height="120" fill="#1C252B"/><path d="M30 100V45h340v55M30 45l40-25h260l40 25" stroke="#2E86E0" stroke-width="1.4" fill="none" opacity=".7"/></svg>
+        <div style="display:flex;justify-content:space-between;margin-top:18px">
+          <div style="font-weight:600;font-size:16px">Завод «Инфаприм», г. Истра</div>
+          <div style="font-size:12px;color:var(--t1)">Промышленные</div>
+        </div>
+        <div style="font-size:13px;color:var(--ink3);margin-top:6px">Управление проектом в составе генподряда</div>
+      </div>
+      <div class="cell" style="padding:28px">
+        <svg width="100%" height="120" viewBox="0 0 400 120"><rect width="400" height="120" fill="#1C252B"/><path d="M200 20v20M170 40h60l-10 60h-40z" stroke="#34D1B4" stroke-width="1.4" fill="none" opacity=".7"/></svg>
+        <div style="display:flex;justify-content:space-between;margin-top:18px">
+          <div style="font-weight:600;font-size:16px">Церковь Покрова Пресвятой Богородицы</div>
+          <div style="font-size:12px;color:var(--t1)">Реставрация</div>
+        </div>
+        <div style="font-size:13px;color:var(--ink3);margin-top:6px">Ленинградская обл. · Восстановление объекта культурного наследия</div>
+      </div>
+      <div class="cell" style="padding:28px;grid-column:1 / -1">
+        <svg width="100%" height="90" viewBox="0 0 860 90"><rect width="860" height="90" fill="#1C252B"/><path d="M60 70V35l40-20 40 20v35M60 50h80M420 70V40h50v30M420 40l25-15 25 15" stroke="#2E86E0" stroke-width="1.4" fill="none" opacity=".7"/></svg>
+        <div style="display:flex;justify-content:space-between;margin-top:18px">
+          <div style="font-weight:600;font-size:16px">Складской комплекс у/н 46, г.о. Химки</div>
+          <div style="font-size:12px;color:var(--t1)">Промышленные</div>
+        </div>
+        <div style="font-size:13px;color:var(--ink3);margin-top:6px">Технический заказчик, генпроектирование</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA / FOOTER -->
+  <div style="position:relative;background:var(--bg2);border-top:1px solid var(--line);padding:80px 0 40px">
+    <div class="wrap">
+      <div style="display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:32px;padding-bottom:56px;border-bottom:1px solid var(--line)">
+        <h2 style="font-size:36px;font-weight:800;letter-spacing:-.02em;max-width:520px;margin:0">Приходите с замыслом до того, как вложены деньги</h2>
+        <div class="btn btn-primary">Обсудить проект</div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center;padding-top:28px;flex-wrap:wrap;gap:16px">
+        <div style="display:flex;align-items:center;gap:10px">
+          <img src="mark_trikron.png" alt="Трикрон" style="height:22px;width:auto;display:block">
+          <span style="font-weight:700;font-size:14px">ТРИКРОН</span>
+        </div>
+        <div style="font-size:13px;color:var(--ink3)">Москва, Староконюшенный пер., 10/10</div>
+        <div style="font-size:13px;color:var(--ink2)">+7 495 920-11-91 · info@trikron.ru</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

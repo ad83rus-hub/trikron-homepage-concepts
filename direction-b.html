@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Трикрон — направление B</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EAECE6; --panel:#E0E3DC; --panel2:#D5D9CE;
+    --ink:#16201D; --ink2:#44534E; --ink3:#5C6863;
+    --line:#C3C8BE; --line2:#9AA298;
+    --mark:#1B4B8F;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Golos Text",system-ui,sans-serif;background:var(--paper);color:var(--ink)}
+  a{color:var(--mark);text-decoration:none}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;font-weight:600;font-size:14px;cursor:pointer;letter-spacing:.01em}
+  .btn-primary{background:var(--mark);color:#fff}
+  .btn-ghost{border:1px solid var(--line2);color:var(--ink)}
+  .label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);font-weight:600}
+  .tick{position:relative}
+  .tick::before,.tick::after{content:"";position:absolute;width:9px;height:9px;border:1px solid var(--line2)}
+  .tick::before{top:-1px;left:-1px;border-right:none;border-bottom:none}
+  .tick::after{bottom:-1px;right:-1px;border-left:none;border-top:none}
+  .num{font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
+</style>
+<style>body{margin:0}</style>
+</head>
+<body>
+<div style="width:1440px;background:var(--paper);position:relative">
+
+  <!-- HEADER -->
+  <div class="wrap" style="padding:28px 0;border-bottom:1px solid var(--line)">
+    <div style="display:flex;align-items:center;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="mark_trikron.png" alt="Трикрон" style="height:28px;width:auto;display:block">
+        <div>
+          <div style="font-weight:800;font-size:17px;letter-spacing:.01em">ТРИКРОН</div>
+          <div style="font-size:10px;letter-spacing:.1em;color:var(--ink3);text-transform:uppercase;margin-top:1px">EPCM · Технический заказчик</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:34px">
+        <a href="#" style="color:var(--ink2);font-size:14px">Услуги</a>
+        <a href="#" style="color:var(--ink2);font-size:14px">Проекты</a>
+        <a href="#" style="color:var(--ink2);font-size:14px">О компании</a>
+        <a href="#" style="color:var(--ink2);font-size:14px">Контакты</a>
+      </div>
+      <div class="btn btn-primary">Обсудить проект</div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="wrap" style="padding:72px 0 56px;display:grid;grid-template-columns:1fr 460px;gap:48px;align-items:center">
+    <div>
+      <div class="label">Лист 01 · Титул</div>
+      <h1 style="font-size:52px;line-height:1.08;font-weight:700;letter-spacing:-.015em;margin:18px 0 0;max-width:620px">
+        Инвестиционно-строительный инжиниринг: от оценки замысла до ввода объекта
+      </h1>
+      <p style="font-size:17px;line-height:1.55;color:var(--ink2);max-width:520px;margin:24px 0 0">
+        ООО «Трикрон-Проект» — технический заказчик и проектировщик полного цикла. Работаем с 2014 года, отвечаем за проект от первой оценки до передачи объекта в эксплуатацию.
+      </p>
+      <div style="display:flex;gap:14px;margin-top:34px">
+        <div class="btn btn-primary">Обсудить проект</div>
+        <div class="btn btn-ghost">Смотреть проекты</div>
+      </div>
+    </div>
+    <div class="tick" style="padding:28px">
+      <svg width="100%" height="400" viewBox="0 0 420 400">
+        <rect x="60" y="120" width="140" height="220" fill="none" stroke="var(--ink)" stroke-width="1.3"/>
+        <rect x="200" y="60" width="110" height="280" fill="none" stroke="var(--mark)" stroke-width="1.3"/>
+        <rect x="310" y="160" width="70" height="180" fill="none" stroke="var(--ink)" stroke-width="1.3"/>
+        <path d="M60 120l70-40 70 40" fill="none" stroke="var(--ink)" stroke-width="1.3"/>
+        <line x1="60" y1="360" x2="200" y2="360" stroke="var(--ink3)" stroke-width="1"/>
+        <line x1="60" y1="355" x2="60" y2="365" stroke="var(--ink3)" stroke-width="1"/>
+        <line x1="200" y1="355" x2="200" y2="365" stroke="var(--ink3)" stroke-width="1"/>
+        <text x="118" y="380" font-size="11" fill="var(--ink3)" font-family="Golos Text">14 000 м²</text>
+        <line x1="30" y1="120" x2="30" y2="340" stroke="var(--ink3)" stroke-width="1"/>
+        <text x="8" y="235" font-size="11" fill="var(--ink3)" font-family="Golos Text" transform="rotate(-90 18 235)">4 этапа</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- STAGES STRIP -->
+  <div class="wrap" style="display:flex;border-top:1px solid var(--line2);padding-top:2px">
+    <div style="flex:1;padding:12px 16px 0 0;font-size:12px;color:var(--ink3)">01 Инициация</div>
+    <div style="flex:1;padding:12px 16px 0;border-left:1px solid var(--line);font-size:12px;color:var(--ink3)">02 Проектирование</div>
+    <div style="flex:1;padding:12px 16px 0;border-left:1px solid var(--line);font-size:12px;color:var(--ink3)">03 Строительство</div>
+    <div style="flex:1;padding:12px 0 0;border-left:1px solid var(--line);font-size:12px;color:var(--ink3)">04 Эксплуатация</div>
+  </div>
+
+  <!-- STATS -->
+  <div class="wrap" style="padding:56px 0">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)">
+      <div style="background:var(--paper);padding:22px 20px 26px">
+        <div class="num" style="font-size:32px;font-weight:700;letter-spacing:-.02em">2014</div>
+        <div style="font-size:12px;color:var(--ink3);margin-top:8px;line-height:1.35">на рынке с</div>
+      </div>
+      <div style="background:var(--paper);padding:22px 20px 26px">
+        <div class="num" style="font-size:32px;font-weight:700;letter-spacing:-.02em">500 млн ₽</div>
+        <div style="font-size:12px;color:var(--ink3);margin-top:8px;line-height:1.35">застрахованная профответственность</div>
+      </div>
+      <div class="tick" style="background:var(--panel);padding:22px 20px 26px">
+        <div class="num" style="font-size:32px;font-weight:700;letter-spacing:-.02em">2</div>
+        <div style="font-size:12px;color:var(--ink3);margin-top:8px;line-height:1.35">допуска СРО: проектирование, реставрация</div>
+      </div>
+      <div style="background:var(--paper);padding:22px 20px 26px">
+        <div class="num" style="font-size:32px;font-weight:700;letter-spacing:-.02em">НРС</div>
+        <div style="font-size:12px;color:var(--ink3);margin-top:8px;line-height:1.35">штат в Национальном реестре специалистов</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCOPE / 4 STAGES -->
+  <div class="wrap" style="padding-bottom:64px">
+    <div class="label">Лист 02 · Полный цикл</div>
+    <h2 style="font-size:28px;font-weight:700;letter-spacing:-.01em;margin:14px 0 32px;max-width:600px">Сопровождаем проект на всех этапах жизненного цикла</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px">
+      <div>
+        <div style="font-size:12px;color:var(--mark);font-weight:600">01</div>
+        <div style="font-weight:700;font-size:16px;margin-top:10px">Инициация</div>
+        <div style="font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.5">Оценка участка, сбор ИРД и технических условий, риски</div>
+      </div>
+      <div>
+        <div style="font-size:12px;color:var(--mark);font-weight:600">02</div>
+        <div style="font-weight:700;font-size:16px;margin-top:10px">Проектирование</div>
+        <div style="font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.5">Выбор проектировщиков, график работ, экспертиза</div>
+      </div>
+      <div>
+        <div style="font-size:12px;color:var(--mark);font-weight:600">03</div>
+        <div style="font-weight:700;font-size:16px;margin-top:10px">Строительство</div>
+        <div style="font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.5">Тендеры, договоры, строительный контроль</div>
+      </div>
+      <div>
+        <div style="font-size:12px;color:var(--mark);font-weight:600">04</div>
+        <div style="font-weight:700;font-size:16px;margin-top:10px">Эксплуатация</div>
+        <div style="font-size:13px;color:var(--ink2);margin-top:8px;line-height:1.5">Анализ состояния, ведомость дефектов</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECTS TABLE -->
+  <div style="background:var(--panel);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);padding:64px 0">
+    <div class="wrap">
+      <div class="label">Лист 03 · Проекты</div>
+      <h2 style="font-size:28px;font-weight:700;letter-spacing:-.01em;margin:14px 0 32px">Реализованные объекты</h2>
+      <div style="display:flex;flex-direction:column">
+        <div style="display:grid;grid-template-columns:2fr 1fr 1.4fr;padding:0 0 12px;border-bottom:1px solid var(--line2)" class="label">
+          <div>Объект</div><div>Город</div><div>Роль Трикрона</div>
+        </div>
+        <div style="display:grid;grid-template-columns:2fr 1fr 1.4fr;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline">
+          <div style="font-weight:600;font-size:15px">Складской комплекс у/н 49</div><div style="font-size:14px;color:var(--ink2)">г.о. Химки</div><div style="font-size:14px;color:var(--ink2)">Техзаказчик, генподряд, генпроектирование</div>
+        </div>
+        <div style="display:grid;grid-template-columns:2fr 1fr 1.4fr;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline">
+          <div style="font-weight:600;font-size:15px">Складской комплекс у/н 46</div><div style="font-size:14px;color:var(--ink2)">г.о. Химки</div><div style="font-size:14px;color:var(--ink2)">Техзаказчик, генпроектирование</div>
+        </div>
+        <div style="display:grid;grid-template-columns:2fr 1fr 1.4fr;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline">
+          <div style="font-weight:600;font-size:15px">Гребной клуб «Спарта»</div><div style="font-size:14px;color:var(--ink2)">Москва</div><div style="font-size:14px;color:var(--ink2)">Технический заказчик</div>
+        </div>
+        <div style="display:grid;grid-template-columns:2fr 1fr 1.4fr;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline">
+          <div style="font-weight:600;font-size:15px">Завод «Инфаприм»</div><div style="font-size:14px;color:var(--ink2)">г. Истра</div><div style="font-size:14px;color:var(--ink2)">Управление проектом в составе генподряда</div>
+        </div>
+        <div style="display:grid;grid-template-columns:2fr 1fr 1.4fr;padding:18px 0;align-items:baseline">
+          <div style="font-weight:600;font-size:15px">Церковь Покрова Пресвятой Богородицы</div><div style="font-size:14px;color:var(--ink2)">Ленинградская обл.</div><div style="font-size:14px;color:var(--ink2)">Восстановление объекта культурного наследия</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA / FOOTER -->
+  <div class="wrap" style="padding:64px 0 40px">
+    <div style="display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:28px;padding-bottom:44px;border-bottom:1px solid var(--line2)">
+      <h2 style="font-size:30px;font-weight:700;letter-spacing:-.015em;max-width:520px;margin:0">Приходите с замыслом до того, как вложены деньги</h2>
+      <div class="btn btn-primary">Обсудить проект</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;padding-top:26px;flex-wrap:wrap;gap:14px">
+      <div style="font-size:12px;color:var(--ink3)">ООО «Трикрон-Проект» · Москва, Староконюшенный пер., 10/10</div>
+      <div style="font-size:12px;color:var(--ink2)">+7 495 920-11-91 · info@trikron.ru</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
