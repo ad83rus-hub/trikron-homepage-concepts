@@ -8,33 +8,17 @@
   <title>Что делаем — управление строительством | ГК Трикрон</title>
   <link rel="stylesheet" href="../projects/projects.css">
   <style>
-    .services-hero{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(22px,4vw,54px);align-items:center}
-    .services-hero h1{font-size:clamp(27px,3.4vw,49px);overflow-wrap:normal}
     .services-intro{font-size:clamp(17px,2vw,21px)}
-    .services-diagram{padding:12px clamp(10px,2vw,22px) 16px;border:1px solid var(--line);background:#20282c}
-    .services-diagram img{display:block;width:100%;height:auto}
-    .diagram-caption{color:var(--muted);font-size:13px}
-    .diagram-key{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));list-style:none;margin:9px 0 0;padding:0;border-top:1px solid var(--line)}
-    .diagram-key a{display:flex;align-items:center;gap:8px;min-height:42px;font-size:13px}
-    .diagram-key a span{color:var(--stage-color);font-weight:700}
-    .stage-1{--stage-color:#3ddbb0}
-    .stage-2{--stage-color:#55cdc6}
-    .stage-3{--stage-color:#64bed7}
-    .stage-4{--stage-color:#6fa8e8}
     .management,.services-contact{padding:clamp(20px,4vw,42px);background:#262b2f}
-    .management{margin-top:38px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:16px 36px}
-    .management p,.service-stage li,.stage-result p,.services-contact p{color:var(--muted)}
-    .services h2{font:500 clamp(21px,2.75vw,36px)/1.2 Unbounded,sans-serif;letter-spacing:-.04em}
-    .stage-heading{margin-top:clamp(45px,7vw,88px)}
-    .service-stages{list-style:none;padding:0;margin:25px 0 0}
-    .service-stage{display:grid;grid-template-columns:44px minmax(0,1fr) minmax(0,.65fr);gap:16px 24px;border-top:1px solid var(--line);padding:27px 0;scroll-margin-top:16px}
-    .service-stage:last-child{border-bottom:1px solid var(--line)}
-    .stage-number{color:var(--stage-color);font:500 16px/1.5 Unbounded,sans-serif}
-    .service-stage h3{margin:0;font-size:clamp(18px,2vw,24px);line-height:1.25}
-    .service-stage ul{padding-left:19px;margin:12px 0 0}
-    .service-stage li+li{margin-top:5px}
-    .stage-result{border-left:1px solid var(--line);padding-left:20px}
-    .stage-result h4{margin:0 0 7px;font-size:15px;color:var(--mint)}
+    .management{margin-top:32px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.55fr);align-items:start;gap:12px 36px;border-left:2px solid var(--mint)}
+    .management p,.service-stage p,.services-contact p{color:var(--muted)}
+    .services h2{font:500 clamp(21px,2.75vw,34px)/1.2 Unbounded,sans-serif;letter-spacing:-.04em}
+    .stage-heading{margin-top:clamp(38px,6vw,68px)}
+    .service-stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:20px 0 0}
+    .service-stage{padding:clamp(16px,2.5vw,28px);border:1px solid var(--line);scroll-margin-top:16px}
+    .service-stage:target{border-color:var(--mint)}
+    .stage-number{color:var(--mint);font:500 14px/1.5 Unbounded,sans-serif}
+    .service-stage h3{margin:8px 0 6px;font-size:clamp(18px,2vw,22px);line-height:1.25}
     .services-contact{margin-top:clamp(38px,6vw,68px)}
     .services-contact p{margin-top:10px}
     .services-contact nav{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin-top:18px}
@@ -42,12 +26,12 @@
     .service-button{padding:10px 15px;background:var(--mint);color:var(--bg)}
     .service-button:hover{background:#8aefd3;color:var(--bg)}
     .service-link{gap:8px;color:var(--mint)}
-    @media(max-width:740px){.services-hero{grid-template-columns:1fr}}
+    @media(max-width:850px){
+      .service-stages{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
     @media(max-width:660px){
       .services-header .wrap{flex-wrap:wrap;gap:0 14px;padding-block:6px}
-      .management{grid-template-columns:1fr}
-      .service-stage{grid-template-columns:30px minmax(0,1fr);gap:12px 8px;padding-block:20px}
-      .stage-result{grid-column:2;border-left:0;padding-left:0}
+      .management,.service-stages{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -66,89 +50,46 @@
     <nav class="breadcrumb" aria-label="Путь к странице">
       <a href="../index.html">Главная</a><span aria-hidden="true">/</span><span aria-current="page">Что делаем</span>
     </nav>
-    <div class="services-hero">
-      <div>
-        <h1>Что делаем</h1>
-        <p class="intro services-intro">Подключаемся на этапе оценки участка или берём на себя отдельную задачу. Объединяем функции технического заказчика, генерального проектировщика и генерального подрядчика.</p>
-      </div>
-      <figure class="services-diagram">
-        <img src="../assets/services-axonometry.svg" width="620" height="345" alt="Аксонометрия здания с открытой частью кровли, где видны каркас, инженерные сети и оборудование">
-        <figcaption>
-          <p class="diagram-caption">Условная схема промышленного объекта</p>
-          <ul class="diagram-key" aria-label="Элементы схемы и этапы работ">
-            <li class="stage-1"><a href="#stage-site"><span>01</span> Участок</a></li>
-            <li class="stage-2"><a href="#stage-design"><span>02</span> Каркас</a></li>
-            <li class="stage-3"><a href="#stage-build"><span>03</span> Инженерные сети</a></li>
-            <li class="stage-4"><a href="#stage-launch"><span>04</span> Оборудование</a></li>
-          </ul>
-        </figcaption>
-      </figure>
-    </div>
+    <h1>Что делаем</h1>
+    <p class="intro services-intro">Ведём строительный проект от оценки замысла до ввода объекта. Берём на себя функции технического заказчика, генерального проектировщика и генерального подрядчика.</p>
 
     <section class="management" aria-labelledby="management-title">
-      <h2 id="management-title">Управление проектом на всех этапах</h2>
-      <p>Связываем проектирование, закупки и строительство единым графиком по принципу EPC. Координируем участников, следим за сроками и бюджетом. Перед согласованием изменений оцениваем их влияние на поставки, контракты и ход работ.</p>
+      <h2 id="management-title">Управление проектом</h2>
+      <p>Оцениваем экономику проекта, строим финансовую модель и помогаем выбрать схему финансирования. По принципу EPC увязываем проектирование, закупки и стройку единым графиком и управляем бюджетом, рисками и договорами.</p>
     </section>
 
     <section class="stage-heading" aria-labelledby="stage-title">
-      <h2 id="stage-title">Этапы работ</h2>
-      <ol class="service-stages">
-        <li class="service-stage stage-1" id="stage-site">
+      <h2 id="stage-title">Направления работ</h2>
+      <ol class="service-stages" role="list">
+        <li class="service-stage" id="stage-site">
           <span class="stage-number" aria-hidden="true">01</span>
-          <div>
-            <h3>Оценка участка и подготовка</h3>
-            <ul>
-              <li>Оцениваем реализуемость замысла и ограничения участка, готовим технико-экономическое обоснование.</li>
-              <li>Организуем инженерные изыскания, сбор исходных документов, включая ГПЗУ, и получение технических условий подключения к сетям.</li>
-              <li>Готовим исходные данные и задание для проектирования.</li>
-            </ul>
-          </div>
-          <div class="stage-result">
-            <h4>Результат для заказчика</h4>
-            <p>Понимание, что можно построить на участке, и исходные данные для проектирования.</p>
-          </div>
+          <h3>Оценка замысла и участка</h3>
+          <p>Проверяем, можно ли реализовать замысел на участке. Готовим эскиз и технико-экономическое обоснование.</p>
         </li>
-        <li class="service-stage stage-2" id="stage-design">
+        <li class="service-stage" id="stage-permits">
           <span class="stage-number" aria-hidden="true">02</span>
-          <div>
-            <h3>Проектирование</h3>
-            <ul>
-              <li>Разрабатываем проектную и рабочую документацию, сопровождаем экспертизу.</li>
-              <li>Планируем сроки и бюджет проектирования, увязываем выпуск документации с графиком стройки.</li>
-            </ul>
-          </div>
-          <div class="stage-result">
-            <h4>Результат для заказчика</h4>
-            <p>Комплект документации для экспертизы и выполнения строительных работ.</p>
-          </div>
+          <h3>Изыскания и согласования</h3>
+          <p>Организуем изыскания, получение градостроительного плана участка и техусловий на подключение к сетям.</p>
         </li>
-        <li class="service-stage stage-3" id="stage-build">
+        <li class="service-stage" id="stage-design">
           <span class="stage-number" aria-hidden="true">03</span>
-          <div>
-            <h3>Закупки и строительство</h3>
-            <ul>
-              <li id="stage-procurement">Организуем выбор поставщиков и подрядчиков, координируем договоры и поставки.</li>
-              <li>Согласуем работы подрядчиков и контролируем объёмы, качество и сроки строительства.</li>
-            </ul>
-          </div>
-          <div class="stage-result">
-            <h4>Результат для заказчика</h4>
-            <p>Поставки увязаны с графиком монтажа, а ход работ и отклонения видны по мере строительства.</p>
-          </div>
+          <h3>Проектирование</h3>
+          <p>Разрабатываем проектную и рабочую документацию. Сопровождаем экспертизу и получение разрешения на строительство.</p>
         </li>
-        <li class="service-stage stage-4" id="stage-launch">
+        <li class="service-stage" id="stage-procurement">
           <span class="stage-number" aria-hidden="true">04</span>
-          <div>
-            <h3>Пусконаладка и ввод</h3>
-            <ul>
-              <li>Организуем пусконаладку и участвуем в испытаниях оборудования.</li>
-              <li>Координируем приёмку, сопровождаем получение разрешения на ввод и передачу объекта заказчику.</li>
-            </ul>
-          </div>
-          <div class="stage-result">
-            <h4>Результат для заказчика</h4>
-            <p>Проверенное оборудование и комплект документов для ввода и передачи объекта.</p>
-          </div>
+          <h3>Закупки и поставки</h3>
+          <p>Проводим тендеры, заключаем договоры с поставщиками и увязываем поставки с графиком монтажа.</p>
+        </li>
+        <li class="service-stage" id="stage-build">
+          <span class="stage-number" aria-hidden="true">05</span>
+          <h3>Строительство</h3>
+          <p>Координируем подрядчиков и ведём строительный контроль. Следим за объёмами, качеством и сроками работ.</p>
+        </li>
+        <li class="service-stage" id="stage-launch">
+          <span class="stage-number" aria-hidden="true">06</span>
+          <h3>Пусконаладка и ввод</h3>
+          <p>Организуем пусконаладку и испытания, сопровождаем получение разрешения на ввод и передачу объекта заказчику.</p>
         </li>
       </ol>
     </section>
