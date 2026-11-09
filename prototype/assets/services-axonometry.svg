@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 345" width="620" height="345">
+  <title>Условная аксонометрия промышленного здания</title>
+  <defs><radialGradient id="vignette"><stop offset=".35" stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></radialGradient>
+    <mask id="grid-fade"><ellipse cx="310" cy="207" rx="310" ry="145" fill="url(#vignette)"/></mask></defs>
+  <g fill="none" stroke="#3a4a51" stroke-opacity=".64" stroke-width=".65" mask="url(#grid-fade)">
+    <polyline points="251,21.1 -156,186.1" fill="none" />
+    <polyline points="325,21.1 843,231.1" fill="none" />
+    <polyline points="288,36.1 -119,201.1" fill="none" />
+    <polyline points="288,36.1 806,246.1" fill="none" />
+    <polyline points="325,51.1 -82,216.1" fill="none" />
+    <polyline points="251,51.1 769,261.1" fill="none" />
+    <polyline points="362,66.1 -45,231.1" fill="none" />
+    <polyline points="214,66.1 732,276.1" fill="none" />
+    <polyline points="399,81.1 -8,246.1" fill="none" />
+    <polyline points="177,81.1 695,291.1" fill="none" />
+    <polyline points="436,96.1 29,261.1" fill="none" />
+    <polyline points="140,96.1 658,306.1" fill="none" />
+    <polyline points="473,111.1 66,276.1" fill="none" />
+    <polyline points="103,111.1 621,321.1" fill="none" />
+    <polyline points="510,126.1 103,291.1" fill="none" />
+    <polyline points="66,126.1 584,336.1" fill="none" />
+    <polyline points="547,141.1 140,306.1" fill="none" />
+    <polyline points="29,141.1 547,351.1" fill="none" />
+    <polyline points="584,156.1 177,321.1" fill="none" />
+    <polyline points="-8,156.1 510,366.1" fill="none" />
+    <polyline points="621,171.1 214,336.1" fill="none" />
+    <polyline points="-45,171.1 473,381.1" fill="none" />
+    <polyline points="658,186.1 251,351.1" fill="none" />
+    <polyline points="-82,186.1 436,396.1" fill="none" />
+    <polyline points="695,201.1 288,366.1" fill="none" />
+    <polyline points="-119,201.1 399,411.1" fill="none" />
+    <polyline points="732,216.1 325,381.1" fill="none" />
+    <polyline points="-156,216.1 362,426.1" fill="none" />
+    <polyline points="769,231.1 362,396.1" fill="none" />
+    <polyline points="-193,231.1 325,441.1" fill="none" />
+    <polyline points="806,246.1 399,411.1" fill="none" />
+    <polyline points="-230,246.1 288,456.1" fill="none" />
+  </g>
+  <g stroke-linejoin="round">
+    <polygon points="567.3,208.8 362,292 362,299.8 567.3,216.6" fill="#233138" stroke="#425660"/>
+    <polygon points="362,292 84.5,179.5 84.5,187.3 362,299.8" fill="#202d34" stroke="#425660"/>
+    <polygon points="289.9,96.3 567.3,208.8 362,292 84.5,179.5" fill="#252f34" stroke="#526771"/>
+    <polygon points="289.9,106.8 540.7,208.4 362,280.9 111.1,179.2" fill="none" stroke="#66818b" stroke-dasharray="5 5" stroke-opacity=".7"/>
+    <polygon points="288,118 510,208 362,268 140,178" fill="#2a383e" stroke="#637b85"/>
+    <polygon points="288,118 510,208 510,121 288,31" fill="#253439" stroke="#5c737b"/>
+    <polygon points="288,118 140,178 140,91 214,28.5 288,31" fill="#2c3c42" stroke="#5c737b"/>
+  <g stroke="#92aeb7" stroke-width="1" stroke-opacity=".8">
+    <polyline points="288,118 288,31 214,28.5 140,91 140,178" fill="none" stroke-width="1.45"/>
+    <polyline points="288,31 140,91" fill="none" stroke-opacity=".6"/>
+    <polyline points="343.5,140.5 343.5,53.5 269.5,51 195.5,113.5 195.5,200.5" fill="none" stroke-width="1.45"/>
+    <polyline points="343.5,53.5 195.5,113.5" fill="none" stroke-opacity=".6"/>
+    <polyline points="399,163 399,76 325,73.5 251,136 251,223" fill="none" stroke-width="1.45"/>
+    <polyline points="399,76 251,136" fill="none" stroke-opacity=".6"/>
+    <polyline points="454.5,185.5 454.5,98.5 380.5,96 306.5,158.5 306.5,245.5" fill="none" stroke-width="1.45"/>
+    <polyline points="454.5,98.5 306.5,158.5" fill="none" stroke-opacity=".6"/>
+    <polyline points="510,208 510,121 436,118.5 362,181 362,268" fill="none" stroke-width="1.45"/>
+    <polyline points="510,121 362,181" fill="none" stroke-opacity=".6"/>
+    <polyline points="288,31 510,121" fill="none" />
+    <polyline points="214,28.5 436,118.5" fill="none" />
+    <polyline points="140,91 362,181" fill="none" />
+  </g>
+    <polygon points="288,31 373.1,65.5 299.1,63 214,28.5" fill="#425860" stroke="#9ab4ba"/>
+    <polygon points="214,28.5 299.1,63 225.1,125.5 140,91" fill="#344a53" stroke="#9ab4ba"/>
+  <g stroke="#8aa6ad" stroke-width=".75" stroke-opacity=".55">
+    <polyline points="297.3,34.8 223.3,32.3 149.3,94.8" fill="none" />
+    <polyline points="306.5,38.5 232.5,36 158.5,98.5" fill="none" />
+    <polyline points="315.8,42.3 241.8,39.8 167.8,102.3" fill="none" />
+    <polyline points="325,46 251,43.5 177,106" fill="none" />
+    <polyline points="334.3,49.8 260.3,47.3 186.3,109.8" fill="none" />
+    <polyline points="343.5,53.5 269.5,51 195.5,113.5" fill="none" />
+    <polyline points="352.8,57.3 278.8,54.8 204.8,117.3" fill="none" />
+    <polyline points="362,61 288,58.5 214,121" fill="none" />
+  </g>
+  <g stroke="#5d9da4" stroke-width=".85">
+    <polygon points="389.8,238.8 365.7,248.5 365.7,223.6 389.8,213.8" fill="#263c42"/>
+    <polygon points="365.7,248.5 336.1,236.5 336.1,211.6 365.7,223.6" fill="#29474b"/>
+    <polygon points="360.1,201.8 389.8,213.8 365.7,223.6 336.1,211.6" fill="#65969e"/>
+    <polygon points="407.5,248.1 384.9,257.2 384.9,224.4 407.5,215.3" fill="#263c42"/>
+    <polygon points="384.9,257.2 367.6,250.2 367.6,217.4 384.9,224.4" fill="#29474b"/>
+    <polygon points="390.1,208.2 407.5,215.3 384.9,224.4 367.6,217.4" fill="#4e7986"/>
+    <polygon points="353.5,224.1 336.5,230.9 336.5,214.1 353.5,207.2" fill="#263c42"/>
+    <polygon points="336.5,230.9 321.7,224.9 321.7,208.1 336.5,214.1" fill="#29474b"/>
+    <polygon points="338.7,201.2 353.5,207.2 336.5,214.1 321.7,208.1" fill="#608c94"/>
+  </g>
+  <g stroke="#55cfc0" stroke-width="2" stroke-linecap="round">
+    <polyline points="345.4,100.9 456.4,145.9 419.4,160.9 419.4,197.7 391.6,209" fill="none" />
+    <polyline points="386.1,117.4 302.8,151.1" fill="none" stroke-width="1.2" stroke-opacity=".78"/>
+  </g>
+  <g stroke="#6fa8e8" stroke-width="1.1" stroke-dasharray="4 4">
+    <polyline points="364.6,283.5 498.9,229 478.6,220.8" fill="none" />
+    <polyline points="153,199.8 297.3,258.3" fill="none" />
+  </g>
+  </g>
+  <g font-family="sans-serif" font-size="12" font-weight="700">
+    <polyline points="133.3,192.7 123,238 91,238" fill="none" stroke="#3ddbb0" stroke-width="1" stroke-opacity=".85"/>
+    <circle cx="91" cy="238" r="14" fill="#1d2427" stroke="#3ddbb0"/>
+    <text x="91" y="238" dominant-baseline="central" text-anchor="middle" fill="#3ddbb0">01</text>
+    <polyline points="343.5,62.8 251,70 251,54" fill="none" stroke="#55cdc6" stroke-width="1" stroke-opacity=".85"/>
+    <circle cx="251" cy="54" r="14" fill="#1d2427" stroke="#55cdc6"/>
+    <text x="251" y="54" dominant-baseline="central" text-anchor="middle" fill="#55cdc6">02</text>
+    <polyline points="399,122.6 464,118 490,118" fill="none" stroke="#64bed7" stroke-width="1" stroke-opacity=".85"/>
+    <circle cx="490" cy="118" r="14" fill="#1d2427" stroke="#64bed7"/>
+    <text x="490" y="118" dominant-baseline="central" text-anchor="middle" fill="#64bed7">03</text>
+    <polyline points="393.4,214.3 491,261 528,261" fill="none" stroke="#6fa8e8" stroke-width="1" stroke-opacity=".85"/>
+    <circle cx="528" cy="261" r="14" fill="#1d2427" stroke="#6fa8e8"/>
+    <text x="528" y="261" dominant-baseline="central" text-anchor="middle" fill="#6fa8e8">04</text>
+  </g>
+</svg>
