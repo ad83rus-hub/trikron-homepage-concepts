@@ -95,20 +95,7 @@
     .stages li::after{content:"";position:absolute;top:-1px;left:0;width:100%;height:1px;background:var(--stage);transform:scaleX(0);transform-origin:left}
     .stages li:nth-child(2){--trace-delay:var(--trace-step)}
     .stages li:nth-child(3){--trace-delay:calc(2 * var(--trace-step))}
-    .epc{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(24px,6vw,86px);margin-top:64px;padding:clamp(22px,4vw,52px);background:var(--panel)}
-    .epc h3{font:500 clamp(22px,2.8vw,40px)/1.18 var(--display);letter-spacing:-.04em;margin-bottom:14px}
-    .epc p,.epc dd{color:var(--muted)}
-    .epc p{max-width:38ch}
-    .epc dl{margin:0}
-    .epc dl div{position:relative;padding:13px 0 13px 36px;border-top:1px solid var(--line)}
-    .epc dl div:last-child{border-bottom:1px solid var(--line)}
-    .epc dt{font-weight:700}
-    .epc dt span:first-child{position:absolute;left:0;color:var(--mint);font:500 18px/1.4 var(--display)}
-    .epc dd{margin:3px 0 0;font-size:14px}
-    .epc-governance{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(18px,6vw,86px);padding-top:20px;border-top:1px solid var(--line)}
-    .epc-governance h4{margin:0;font-size:17px;line-height:1.35}
-    .epc .epc-governance p{max-width:none;font-size:14px}
-    .services-more{margin-top:22px;color:var(--mint);font-weight:700}
+    .epc{margin-top:64px;padding:clamp(22px,4vw,52px);background:var(--panel)}\n    .epc h3{font:500 clamp(22px,2.8vw,40px)/1.18 var(--display);letter-spacing:-.04em;margin-bottom:14px}\n    .epc p{color:var(--muted)}\n    .epc-intro{max-width:66ch}\n    .epc-governance-title{margin:30px 0 16px;color:var(--mint);font-size:17px;line-height:1.35}\n    .epc-flow{--flow-gap:clamp(18px,4vw,52px);--marker-size:36px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--flow-gap);margin:0;padding:0;list-style:none}\n    .epc-flow li{position:relative}\n    .epc-flow li:not(:last-child)::after{content:"";position:absolute;top:calc(var(--marker-size) / 2);left:var(--marker-size);width:calc(100% + var(--flow-gap) - var(--marker-size));height:1px;background:var(--mint)}\n    .epc-marker{display:grid;place-items:center;width:var(--marker-size);height:var(--marker-size);border:1px solid var(--mint);border-radius:50%;color:var(--mint);font:500 15px/1 var(--display)}\n    .epc-step-title{display:block;margin:12px 0 5px}\n    .epc-flow p,.epc-example p{margin:0;font-size:14px}\n    .epc-example{margin-top:26px;padding:14px 16px;border-left:2px solid var(--mint);background:var(--bg)}\n    .epc-example h4{margin:0 0 4px;font-size:15px}\n    .services-more{margin-top:22px;color:var(--mint);font-weight:700}
     .projects{background:#22272b;border-block:1px solid var(--line)}
     .featured{position:relative;display:grid;grid-template-columns:1.48fr 1fr;border:1px solid var(--line)}
     .featured:has(a:hover){border-color:var(--mint)}
@@ -209,9 +196,7 @@
       .stages h3{margin:0 0 6px;font-size:17px}
       .stages p{grid-column:2;max-width:40ch}
       .stage-num{line-height:20px}
-      .epc{grid-template-columns:1fr;margin-top:36px}
-      .epc-governance{grid-template-columns:1fr;gap:8px}
-      .featured{grid-template-columns:minmax(0,1fr)}
+      .epc{margin-top:36px}\n      .epc-flow{--flow-gap:18px;grid-template-columns:1fr}\n      .epc-flow li{padding-left:calc(var(--marker-size) + 12px)}\n      .epc-flow li:not(:last-child)::after{top:var(--marker-size);left:calc(var(--marker-size) / 2);width:1px;height:calc(100% + var(--flow-gap) - var(--marker-size))}\n      .epc-marker{position:absolute;top:0;left:0}\n      .epc-step-title{margin-top:0}\n      .featured{grid-template-columns:minmax(0,1fr)}
       .featured-copy h3{font-size:clamp(18px,5.4vw,21px);overflow-wrap:anywhere}
       .featured-image{min-height:0;aspect-ratio:1.68}
       .project-list a{grid-template-columns:1fr auto;gap:3px 12px}
@@ -317,30 +302,7 @@
         <li><span class="stage-num">03</span><h3>Строительство</h3><p>Координируем работы и контролируем бюджет, сроки и качество.</p></li>
         <li><span class="stage-num">04</span><h3>Ввод в эксплуатацию</h3><p>Организуем приёмку и сопровождаем получение разрешения на ввод.</p></li>
       </ol>
-      <section class="epc" id="epc" aria-labelledby="epc-title">
-        <div>
-          <h3 id="epc-title">Работа по принципу EPC</h3>
-          <p>Чтобы вести проект <strong>без потерь на стыках</strong>, связываем проектирование, закупки и строительство единым графиком. Одна команда оценивает, как изменения повлияют на стоимость, поставки и сроки работ.</p>
-        </div>
-        <dl>
-          <div>
-            <dt><span aria-hidden="true">E</span><span>Проектирование</span></dt>
-            <dd>Предусматриваем альтернативы по оборудованию и увязываем выпуск документации с графиком стройки.</dd>
-          </div>
-          <div>
-            <dt><span aria-hidden="true">P</span><span>Закупки</span></dt>
-            <dd>Подключаем поставщиков на предпроектном этапе, оцениваем риски поставок и согласуем сроки с графиком монтажа.</dd>
-          </div>
-          <div>
-            <dt><span aria-hidden="true">C</span><span>Строительство</span></dt>
-            <dd>Согласуем монтаж и пусконаладку с поставками. Ведём исполнительную документацию и заранее взаимодействуем с надзором.</dd>
-          </div>
-        </dl>
-        <div class="epc-governance">
-          <h4>Интегрированное управление рисками и контрактами</h4>
-          <p>Одна команда координирует изменения по всему проекту. При замене оборудования или поставщика она оценивает влияние на бюджет, условия контрактов и график работ до согласования решения.</p>
-        </div>
-      </section>
+      <section class="epc" id="epc" aria-labelledby="epc-title">\n        <h3 id="epc-title">Работа по принципу EPC</h3>\n        <p class="epc-intro">Одна команда связывает проектирование, закупки и строительство единым графиком, чтобы вести проект <strong>без потерь на стыках</strong>.</p>\n        <h4 class="epc-governance-title" id="epc-governance-title">Интегрированное управление рисками и контрактами</h4>\n        <ol class="epc-flow" role="list" aria-labelledby="epc-governance-title">\n          <li>\n            <span class="epc-marker" aria-hidden="true">E</span>\n            <strong class="epc-step-title">Проектирование</strong>\n            <p>Заранее проверяем, какое оборудование можно заменить без переработки проекта.</p>\n          </li>\n          <li>\n            <span class="epc-marker" aria-hidden="true">P</span>\n            <strong class="epc-step-title">Закупки</strong>\n            <p>Сверяем сроки и условия поставки с графиком монтажа.</p>\n          </li>\n          <li>\n            <span class="epc-marker" aria-hidden="true">C</span>\n            <strong class="epc-step-title">Строительство</strong>\n            <p>При изменении работ проверяем влияние на бюджет, сроки и обязательства по договорам.</p>\n          </li>\n        </ol>\n        <div class="epc-example">\n          <h4>Пример. Поставщик переносит срок поставки</h4>\n          <p>Проектировщики проверяют, подойдёт ли аналог. Закупщики сравнивают сроки, цену и условия договора. Строительная команда сверяет варианты с графиком монтажа. Решение согласуем вместе до изменения заказа.</p>\n        </div>\n      </section>
       <a class="text-link services-more" href="services/index.html">Подробнее об услугах <span class="arrow" aria-hidden="true"></span></a>
     </section>
     <section class="section projects" id="projects" aria-labelledby="projects-title">
