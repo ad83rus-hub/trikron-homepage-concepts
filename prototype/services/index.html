@@ -36,11 +36,9 @@
       .stage-sign svg{transition:transform .22s ease-out}
       .service-stage:hover .stage-sign svg{transform:scale(1.18)}
       .service-stage:hover .stage-draw{stroke-dasharray:1;animation:stage-draw .55s ease-out both}
-      .service-stage:hover .stage-route{animation:stage-route .55s ease-out both}
       .service-stage:hover .stage-needle{transform-origin:12px 13px;animation:stage-needle .6s ease-out both}
     }
     @keyframes stage-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
-    @keyframes stage-route{from{transform:translateX(-5px);opacity:0}to{transform:translateX(0);opacity:1}}
     @keyframes stage-needle{from{transform:rotate(-75deg)}75%{transform:rotate(8deg)}to{transform:rotate(0)}}
     .stage-number{color:var(--muted);font:500 13px/1.5 Unbounded,sans-serif}
     .service-stage h3{margin:12px 0 6px;font-size:clamp(18px,2vw,22px);line-height:1.25}
@@ -140,7 +138,7 @@
           <div class="stage-sign" aria-hidden="true">
             <svg viewBox="0 0 24 24">
               <path d="M3 9l6-3 6 3v7l-6 3-6-3z M3 9l6 3 6-3 M9 12v7"/>
-              <path class="stage-route" d="M14 5h8m-3-3 3 3-3 3"/>
+              <path class="stage-draw" pathLength="1" d="M14 4h3a4 4 0 0 1 4 4v10m-2.5-2.5 2.5 2.5 2.5-2.5"/>
             </svg>
             <span class="stage-number">04</span>
           </div>
