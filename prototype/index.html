@@ -162,6 +162,10 @@
     .contact-links{display:grid;justify-items:start;gap:0;margin-top:21px;font-weight:700}
     .contact-links a{min-height:44px}
     .contact .office-locations{margin-top:18px;color:var(--ink);font-weight:700}
+    .company-address{font-style:normal}
+    .contact .company-address{margin-top:8px;color:var(--ink)}
+    .company-ids{display:flex;flex-wrap:wrap;gap:2px 16px}
+    .contact .company-ids{margin-top:8px;font-size:14px}
     form{display:grid;grid-template-columns:1fr 1fr;gap:17px 12px;align-content:start}
     form label{display:grid;gap:7px;font-size:13px;font-weight:700;min-width:0}
     .wide{grid-column:1/-1}
@@ -182,8 +186,10 @@
     .form-actions button:disabled{opacity:.65;cursor:wait}
     .form-result{color:var(--ink);border-left:2px solid var(--mint);padding-left:12px}
     .footer{border-top:1px solid var(--line)}
-    .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:92px}
-    .footer small{color:var(--muted)}
+    .footer-inner{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 24px;padding-block:20px}
+    .footer-company{flex:1 1 250px;color:var(--muted);font-size:13px}
+    .footer-company strong{color:var(--ink)}
+    .footer-nav{display:flex;flex-wrap:wrap;align-items:center;gap:4px 20px}
     .footer .text-link{font-size:13px;font-weight:700}
     @media(max-width:1100px){
       :root{--page:calc(100% - 72px)}
@@ -447,6 +453,8 @@
           <h2 id="contact-title">Обсудим ваш проект</h2>
           <p>Расскажите, какой объект планируете и на каком этапе сейчас находится проект.</p>
           <p class="office-locations">Москва · Санкт-Петербург</p>
+          <address class="company-address">129110, г. Москва, ул. Гиляровского, д. 65, стр. 1, пом. XV, комн. 1</address>
+          <p class="company-ids"><span>ИНН 7702406325</span><span>ОГРН 1167746884910</span></p>
           <div class="contact-links">
             <a class="text-link" href="tel:+74959201191">+7 (495) 920-11-91 <span class="arrow" aria-hidden="true"></span></a>
           </div>
@@ -473,9 +481,15 @@
   <footer class="footer">
     <div class="wrap footer-inner">
       <a class="logo" href="#top" aria-label="ГК Трикрон, начало страницы"><img src="assets/logo.webp" alt="" loading="lazy"></a>
-      <small>ООО «Трикрон-Проект»</small>
-      <a class="text-link" href="privacy.html">Политика обработки персональных данных</a>
-      <a class="text-link" href="#top">К началу <span class="arrow arrow-back" aria-hidden="true"></span></a>
+      <div class="footer-company">
+        <strong>ООО «Трикрон-Проект»</strong>
+        <address class="company-address">129110, г. Москва, ул. Гиляровского, д. 65, стр. 1, пом. XV, комн. 1</address>
+        <p class="company-ids"><span>ИНН 7702406325</span><span>ОГРН 1167746884910</span></p>
+      </div>
+      <nav class="footer-nav" aria-label="Ссылки в подвале">
+        <a class="text-link" href="privacy.html">Политика обработки персональных данных</a>
+        <a class="text-link" href="#top">К началу <span class="arrow arrow-back" aria-hidden="true"></span></a>
+      </nav>
     </div>
   </footer>
   <script>
