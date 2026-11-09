@@ -85,7 +85,7 @@
     .section-head{display:grid;grid-template-columns:1fr .43fr;gap:30px;align-items:end;margin-bottom:39px}
     .section-head h2,.contact h2{font-size:clamp(30px,3.55vw,54px);margin-top:15px}
     .section-head p,.contact p{color:var(--muted);font-size:16px;max-width:40ch}
-    .stages{--trace-step:650ms;display:grid;grid-template-columns:repeat(4,1fr);padding:0;margin:0;list-style:none}
+    .stages{--trace-step:650ms;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:0;margin:0;list-style:none}
     .stages li{position:relative;padding:22px 18px 0 0;border-top:1px solid var(--line)}
     .stages li::before{content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;background:var(--stage)}
     .stages li:nth-child(1){--stage:#3ddbb0}
@@ -95,10 +95,23 @@
     .stage-num{font:13px var(--mono);color:var(--stage)}
     .stages h3{font-size:clamp(15px,1.35vw,19px);margin:12px 0 7px;line-height:1.25}
     .stages p{font-size:14px;color:var(--muted);max-width:30ch}
-    .stages li::after{content:"";position:absolute;top:-1px;left:0;width:100%;height:1px;background:var(--stage);transform:scaleX(0);transform-origin:left}
+    .stages li::after{content:"";position:absolute;top:-1px;left:0;width:100%;height:1px;background:var(--stage);transform-origin:left}
     .stages li:nth-child(2){--trace-delay:var(--trace-step)}
     .stages li:nth-child(3){--trace-delay:calc(2 * var(--trace-step))}
-    .epc{margin-top:64px;padding:clamp(22px,4vw,52px);background:var(--panel)}\n    .epc h3{font:500 clamp(22px,2.8vw,40px)/1.18 var(--display);letter-spacing:-.04em;margin-bottom:14px}\n    .epc p{color:var(--muted)}\n    .epc-intro{max-width:66ch}\n    .epc-governance-title{margin:30px 0 16px;color:var(--mint);font-size:17px;line-height:1.35}\n    .epc-flow{--flow-gap:clamp(18px,4vw,52px);--marker-size:36px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--flow-gap);margin:0;padding:0;list-style:none}\n    .epc-flow li{position:relative}\n    .epc-flow li:not(:last-child)::after{content:"";position:absolute;top:calc(var(--marker-size) / 2);left:var(--marker-size);width:calc(100% + var(--flow-gap) - var(--marker-size));height:1px;background:var(--mint)}\n    .epc-marker{display:grid;place-items:center;width:var(--marker-size);height:var(--marker-size);border:1px solid var(--mint);border-radius:50%;color:var(--mint);font:500 15px/1 var(--display)}\n    .epc-step-title{display:block;margin:12px 0 5px}\n    .epc-flow p,.epc-example p{margin:0;font-size:14px}\n    .epc-example{margin-top:26px;padding:14px 16px;border-left:2px solid var(--mint);background:var(--bg)}\n    .epc-example h4{margin:0 0 4px;font-size:15px}\n    .services-more{margin-top:22px;color:var(--mint);font-weight:700}
+    .epc{margin-top:64px;padding:clamp(22px,4vw,52px);background:var(--panel)}
+    .epc h3{font:500 clamp(22px,2.8vw,40px)/1.18 var(--display);letter-spacing:-.04em;margin-bottom:14px}
+    .epc p{color:var(--muted)}
+    .epc-intro{max-width:66ch}
+    .epc-governance-title{margin:30px 0 16px;color:var(--mint);font-size:17px;line-height:1.35}
+    .epc-flow{--flow-gap:clamp(18px,4vw,52px);--marker-size:36px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--flow-gap);margin:0;padding:0;list-style:none}
+    .epc-flow li{position:relative}
+    .epc-flow li:not(:last-child)::after{content:"";position:absolute;top:calc(var(--marker-size) / 2);left:var(--marker-size);width:calc(100% + var(--flow-gap) - var(--marker-size));height:1px;background:var(--mint)}
+    .epc-marker{display:grid;place-items:center;width:var(--marker-size);height:var(--marker-size);border:1px solid var(--mint);border-radius:50%;color:var(--mint);font:500 15px/1 var(--display)}
+    .epc-step-title{display:block;margin:12px 0 5px}
+    .epc-flow p,.epc-example p{margin:0;font-size:14px}
+    .epc-example{margin-top:26px;padding:14px 16px;border-left:2px solid var(--mint);background:var(--bg)}
+    .epc-example h4{margin:0 0 4px;font-size:15px}
+    .services-more{margin-top:22px;color:var(--mint);font-weight:700}
     .projects{background:#22272b;border-block:1px solid var(--line)}
     .project-ticker{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;min-width:0;border-block:1px solid var(--line)}
     .project-ticker-viewport{min-width:0}
@@ -182,7 +195,17 @@
       .header-inner{gap:13px}
       .header-action{display:none}
       .hero-inner{padding-block:18px 39px}
-      .stages li{padding-inline:13px}
+      #services .section-head{grid-template-columns:minmax(0,1fr);gap:14px}
+      #services .section-head p{max-width:60ch}
+      .stages{grid-template-columns:minmax(0,1fr);margin-left:4px}
+      .stages li{display:grid;grid-template-columns:25px minmax(0,1fr);column-gap:10px;padding:0 0 25px 15px;border-top:0;border-left:1px solid var(--line)}
+      .stages li:last-child{padding-bottom:0;border-left-color:transparent}
+      .stages li::before{top:5px;left:-4px}
+      .stages li::after{top:8px;left:-1px;width:1px;height:100%;transform-origin:top}
+      .stages li:last-child::after{display:none}
+      .stages h3{margin:0 0 6px;font-size:17px}
+      .stages p{grid-column:2;max-width:54ch}
+      .stage-num{line-height:20px}
     }
     @media(max-width:660px){
       :root{--page:calc(100% - 36px)}
@@ -206,16 +229,13 @@
       .section{padding-block:58px}
       .section-head,.contact-inner{grid-template-columns:1fr;gap:17px}
       .section-head{margin-bottom:25px}
-      .stages{grid-template-columns:1fr;margin-left:4px}
-      .stages li{display:grid;grid-template-columns:25px 1fr;column-gap:10px;padding:0 0 25px 15px;border-top:0;border-left:1px solid var(--line)}
-      .stages li:last-child{padding-bottom:0;border-left-color:transparent}
-      .stages li::before{top:5px;left:-4px}
-      .stages li:not(:last-child)::after{top:8px;left:-1px;width:1px;height:100%;transform:scaleY(0);transform-origin:top}
-      .stages li:last-child::after{display:none}
-      .stages h3{margin:0 0 6px;font-size:17px}
-      .stages p{grid-column:2;max-width:40ch}
-      .stage-num{line-height:20px}
-      .epc{margin-top:36px}\n      .epc-flow{--flow-gap:18px;grid-template-columns:1fr}\n      .epc-flow li{padding-left:calc(var(--marker-size) + 12px)}\n      .epc-flow li:not(:last-child)::after{top:var(--marker-size);left:calc(var(--marker-size) / 2);width:1px;height:calc(100% + var(--flow-gap) - var(--marker-size))}\n      .epc-marker{position:absolute;top:0;left:0}\n      .epc-step-title{margin-top:0}\n      .featured{grid-template-columns:minmax(0,1fr)}
+      .epc{margin-top:36px}
+      .epc-flow{--flow-gap:18px;grid-template-columns:1fr}
+      .epc-flow li{padding-left:calc(var(--marker-size) + 12px)}
+      .epc-flow li:not(:last-child)::after{top:var(--marker-size);left:calc(var(--marker-size) / 2);width:1px;height:calc(100% + var(--flow-gap) - var(--marker-size))}
+      .epc-marker{position:absolute;top:0;left:0}
+      .epc-step-title{margin-top:0}
+      .featured{grid-template-columns:minmax(0,1fr)}
       .featured-copy h3{font-size:clamp(18px,5.4vw,21px);overflow-wrap:anywhere}
       .featured-image{min-height:0;aspect-ratio:1.68}
       .project-list a{grid-template-columns:1fr auto;gap:3px 12px}
@@ -236,9 +256,10 @@
       .hero-art.is-revealing .hero-photo{animation:photo-reveal 800ms ease-out both}
       .hero-art.is-revealing .hero-scan{display:block;position:absolute;inset:0;pointer-events:none;animation:scan-travel 800ms ease-out both}
       .hero-scan::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:var(--blue)}
+      .stages.trace-ready li::after{transform:scale(0)}
       .stages.is-tracing li:not(:last-child)::after{animation:trace-stage var(--trace-step) linear var(--trace-delay,0ms) both}
     }
-    @media(min-width:661px) and (prefers-reduced-motion:no-preference){
+    @media(min-width:851px) and (prefers-reduced-motion:no-preference){
       .stages.is-tracing li:last-child::after{animation:trace-stage 250ms ease-out calc(3 * var(--trace-step)) both}
     }
     @media(max-width:660px) and (prefers-reduced-motion:no-preference){
@@ -246,11 +267,10 @@
     }
     @keyframes photo-reveal{from{clip-path:inset(0 0 100%)}to{clip-path:inset(0)}}
     @keyframes scan-travel{0%{transform:translateY(0);opacity:0}13%{opacity:.68}78%{opacity:.55}100%{transform:translateY(100%);opacity:0}}
-    @keyframes trace-stage{to{transform:scale(1)}}
+    @keyframes trace-stage{from{transform:scale(0)}to{transform:scale(1)}}
     @keyframes hotspot-drift{from{translate:0 -2px}to{translate:0 2px}}
     @media(prefers-reduced-motion:reduce){
       *,*::before,*::after{scroll-behavior:auto!important;transition:none!important}
-      .stages li::after,.stages li:not(:last-child)::after{transform:none}
     }
   </style>
 </head>
@@ -321,7 +341,32 @@
         <li><span class="stage-num">03</span><h3>Строительство</h3><p>Координируем работы и контролируем бюджет, сроки и качество.</p></li>
         <li><span class="stage-num">04</span><h3>Ввод в эксплуатацию</h3><p>Организуем приёмку и сопровождаем получение разрешения на ввод.</p></li>
       </ol>
-      <section class="epc" id="epc" aria-labelledby="epc-title">\n        <h3 id="epc-title">Работа по принципу EPC</h3>\n        <p class="epc-intro">Одна команда связывает проектирование, закупки и строительство единым графиком, чтобы вести проект <strong>без потерь на стыках</strong>.</p>\n        <h4 class="epc-governance-title" id="epc-governance-title">Интегрированное управление рисками и контрактами</h4>\n        <ol class="epc-flow" role="list" aria-labelledby="epc-governance-title">\n          <li>\n            <span class="epc-marker" aria-hidden="true">E</span>\n            <strong class="epc-step-title">Проектирование</strong>\n            <p>Заранее проверяем, какое оборудование можно заменить без переработки проекта.</p>\n          </li>\n          <li>\n            <span class="epc-marker" aria-hidden="true">P</span>\n            <strong class="epc-step-title">Закупки</strong>\n            <p>Сверяем сроки и условия поставки с графиком монтажа.</p>\n          </li>\n          <li>\n            <span class="epc-marker" aria-hidden="true">C</span>\n            <strong class="epc-step-title">Строительство</strong>\n            <p>При изменении работ проверяем влияние на бюджет, сроки и обязательства по договорам.</p>\n          </li>\n        </ol>\n        <div class="epc-example">\n          <h4>Пример. Поставщик переносит срок поставки</h4>\n          <p>Проектировщики проверяют, подойдёт ли аналог. Закупщики сравнивают сроки, цену и условия договора. Строительная команда сверяет варианты с графиком монтажа. Решение согласуем вместе до изменения заказа.</p>\n        </div>\n      </section>
+      <section class="epc" id="epc" aria-labelledby="epc-title">
+        <h3 id="epc-title">Работа по принципу EPC</h3>
+        <p class="epc-intro">Одна команда связывает проектирование, закупки и строительство единым графиком, чтобы вести проект <strong>без потерь на стыках</strong>.</p>
+        <h4 class="epc-governance-title" id="epc-governance-title">Интегрированное управление рисками и контрактами</h4>
+        <ol class="epc-flow" role="list" aria-labelledby="epc-governance-title">
+          <li>
+            <span class="epc-marker" aria-hidden="true">E</span>
+            <strong class="epc-step-title">Проектирование</strong>
+            <p>Заранее проверяем, какое оборудование можно заменить без переработки проекта.</p>
+          </li>
+          <li>
+            <span class="epc-marker" aria-hidden="true">P</span>
+            <strong class="epc-step-title">Закупки</strong>
+            <p>Сверяем сроки и условия поставки с графиком монтажа.</p>
+          </li>
+          <li>
+            <span class="epc-marker" aria-hidden="true">C</span>
+            <strong class="epc-step-title">Строительство</strong>
+            <p>При изменении работ проверяем влияние на бюджет, сроки и обязательства по договорам.</p>
+          </li>
+        </ol>
+        <div class="epc-example">
+          <h4>Пример. Поставщик переносит срок поставки</h4>
+          <p>Проектировщики проверяют, подойдёт ли аналог. Закупщики сравнивают сроки, цену и условия договора. Строительная команда сверяет варианты с графиком монтажа. Решение согласуем вместе до изменения заказа.</p>
+        </div>
+      </section>
       <a class="text-link services-more" href="services/index.html">Подробнее о нашей работе <span class="arrow" aria-hidden="true"></span></a>
     </section>
     <section class="section projects" id="projects" aria-labelledby="projects-title">
@@ -516,6 +561,7 @@
           stageObserver.disconnect();
         }
       }, {threshold: .2});
+      stages.classList.add('trace-ready');
       stageObserver.observe(stages);
     }
 
