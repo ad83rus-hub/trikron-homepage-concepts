@@ -8,6 +8,7 @@
   <meta name="description" content="ГК Трикрон ведёт инвестиционно-строительные проекты от оценки участка до ввода в эксплуатацию. Технический заказчик, генеральный проектировщик и генеральный подрядчик.">
   <title>ГК Трикрон — управление проектами в строительстве</title>
   <link rel="stylesheet" href="assets/arrows.css">
+  <link rel="stylesheet" href="assets/epc.css">
   <style>
     @font-face{font-family:Manrope;src:url(assets/Manrope-Regular.woff2) format("woff2");font-display:swap}
     @font-face{font-family:Manrope;src:url(assets/Manrope-Bold.woff2) format("woff2");font-weight:700;font-display:swap}
@@ -67,13 +68,14 @@
     .hero-scan{display:none}
     .epc-hotspot{position:absolute;z-index:1;top:var(--y);left:var(--x);transform:translateY(-50%);color:var(--ink)}
     .epc-hotspot[open]{z-index:2}
-    .epc-hotspot-e{--x:50%;--y:34%;--dot:var(--mint)}
-    .epc-hotspot-p{--x:21%;--y:74%;--dot:#55cdc6;--drift-delay:-1.2s}
-    .epc-hotspot-c{--y:89%;--dot:var(--blue);--drift-delay:-2.4s;left:auto;right:13%}
+    .epc-hotspot-e{--x:50%;--y:34%;--dot:var(--epc-e)}
+    .epc-hotspot-p{--x:21%;--y:74%;--dot:var(--epc-p);--drift-delay:-1.2s}
+    .epc-hotspot-c{--y:89%;--dot:var(--epc-c);--drift-delay:-2.4s;left:auto;right:13%}
     .epc-hotspot summary{display:flex;align-items:center;min-height:44px;list-style:none;cursor:pointer}
     .epc-hotspot summary::-webkit-details-marker{display:none}
     .hotspot-chip{display:flex;align-items:center;gap:7px;padding:5px 9px;border:1px solid #536064;background:#1c2023;font-size:13px;font-weight:700;white-space:nowrap;transform:translate(var(--magnet-x,0px),var(--magnet-y,0px));transition:transform .2s ease,border-color .2s ease}
     .epc-hotspot-c .hotspot-chip{flex-direction:row-reverse}
+    .hotspot-letter{color:var(--dot)}
     .epc-hotspot[open] .hotspot-chip,.epc-hotspot summary:hover .hotspot-chip{border-color:var(--dot)}
     .hotspot-dot{width:8px;height:8px;border-radius:50%;background:var(--dot);box-shadow:0 0 0 3px color-mix(in srgb,var(--dot) 22%,transparent)}
     .hotspot-link{position:absolute;top:100%;left:0;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:6px 10px;border:1px solid var(--line);background:var(--panel);color:var(--dot);font-size:13px;font-weight:700;white-space:nowrap}
@@ -277,15 +279,15 @@
           </svg>
           <span class="hero-scan" aria-hidden="true"></span>
           <details class="epc-hotspot epc-hotspot-e" name="epc-hotspots">
-            <summary><span class="hotspot-chip"><span class="hotspot-dot" aria-hidden="true"></span>E Проектирование</span></summary>
+            <summary><span class="hotspot-chip"><span class="hotspot-dot" aria-hidden="true"></span><span><b class="hotspot-letter">E</b> Проектирование</span></span></summary>
             <a class="hotspot-link" href="services/index.html#stage-design" aria-label="Подробнее о проектировании">Подробнее <span class="arrow" aria-hidden="true"></span></a>
           </details>
           <details class="epc-hotspot epc-hotspot-p" name="epc-hotspots">
-            <summary><span class="hotspot-chip"><span class="hotspot-dot" aria-hidden="true"></span>P Закупки</span></summary>
+            <summary><span class="hotspot-chip"><span class="hotspot-dot" aria-hidden="true"></span><span><b class="hotspot-letter">P</b> Закупки</span></span></summary>
             <a class="hotspot-link" href="services/index.html#stage-procurement" aria-label="Подробнее о закупках">Подробнее <span class="arrow" aria-hidden="true"></span></a>
           </details>
           <details class="epc-hotspot epc-hotspot-c" name="epc-hotspots">
-            <summary><span class="hotspot-chip"><span class="hotspot-dot" aria-hidden="true"></span>C Строительство</span></summary>
+            <summary><span class="hotspot-chip"><span class="hotspot-dot" aria-hidden="true"></span><span><b class="hotspot-letter">C</b> Строительство</span></span></summary>
             <a class="hotspot-link" href="services/index.html#stage-build" aria-label="Подробнее о строительстве">Подробнее <span class="arrow" aria-hidden="true"></span></a>
           </details>
         </div>
