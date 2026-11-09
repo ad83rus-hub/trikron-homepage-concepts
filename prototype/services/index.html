@@ -25,14 +25,23 @@
     .management h3{margin:0;color:var(--mint);font-size:19px}
     .management .management-scope{margin-top:2px;color:var(--ink);font-size:14px}
     .service-stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;padding:16px 0 0 16px;margin:0;border-top:1px solid var(--mint);border-left:1px solid var(--mint)}
-    .service-stage{position:relative;padding:clamp(16px,2.5vw,28px);border:1px solid var(--line);background:#262b2f;scroll-margin-top:16px}
+    .service-stage{--stage-accent:var(--ink);position:relative;padding:clamp(16px,2.5vw,28px);border:1px solid var(--line);border-top-color:color-mix(in srgb, var(--stage-accent) 60%, var(--line));background:#262b2f;background:color-mix(in srgb, var(--stage-accent) 8%, #262b2f);scroll-margin-top:16px}
     .epc-design{--stage-accent:var(--epc-e)}
     .epc-procurement{--stage-accent:var(--epc-p)}
     .epc-construction{--stage-accent:var(--epc-c)}
-    .service-stage:is(.epc-design,.epc-procurement,.epc-construction){background:color-mix(in srgb, var(--stage-accent) 8%, #262b2f);border-top-color:color-mix(in srgb, var(--stage-accent) 60%, var(--line))}
-    .service-stage:target{border-color:var(--stage-accent,var(--mint))}
+    .service-stage:target{border-color:var(--stage-accent)}
     .stage-sign{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .stage-sign svg{width:36px;height:36px;color:var(--stage-accent,var(--mint));fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
+    .stage-sign svg{width:36px;height:36px;color:var(--stage-accent);fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
+    @media(hover:hover) and (prefers-reduced-motion:no-preference){
+      .stage-sign svg{transition:transform .22s ease-out}
+      .service-stage:hover .stage-sign svg{transform:scale(1.18)}
+      .service-stage:hover .stage-draw{stroke-dasharray:1;animation:stage-draw .55s ease-out both}
+      .service-stage:hover .stage-route{animation:stage-route .55s ease-out both}
+      .service-stage:hover .stage-needle{transform-origin:12px 13px;animation:stage-needle .6s ease-out both}
+    }
+    @keyframes stage-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+    @keyframes stage-route{from{transform:translateX(-5px);opacity:0}to{transform:translateX(0);opacity:1}}
+    @keyframes stage-needle{from{transform:rotate(-75deg)}75%{transform:rotate(8deg)}to{transform:rotate(0)}}
     .stage-number{color:var(--muted);font:500 13px/1.5 Unbounded,sans-serif}
     .service-stage h3{margin:12px 0 6px;font-size:clamp(18px,2vw,22px);line-height:1.25}
     .services-contact{margin-top:clamp(38px,6vw,68px)}
@@ -49,7 +58,7 @@
       .services-header .wrap{flex-wrap:wrap;gap:0 14px;padding-block:6px}
       .services-hero,.management,.service-stages{grid-template-columns:1fr}
       .service-stages{padding-top:0;border-top:0}
-      .service-stage::before{content:"";position:absolute;left:-20px;top:30px;width:7px;height:7px;border-radius:50%;background:var(--mint)}
+      .service-stage::before{content:"";position:absolute;left:-20px;top:30px;width:7px;height:7px;border-radius:50%;background:var(--stage-accent)}
     }
   </style>
 </head>
@@ -96,7 +105,10 @@
       <ol class="service-stages" role="list">
         <li class="service-stage" id="stage-site">
           <div class="stage-sign" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z M8 8h8v8H8z M2 5h4 M4 3v4 M18 19h4 M20 17v4"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M8 8h8v8H8z M2 5h4 M4 3v4 M18 19h4 M20 17v4"/>
+              <path class="stage-draw" pathLength="1" d="M4 5h16v14H4z"/>
+            </svg>
             <span class="stage-number">01</span>
           </div>
           <h3>Оценка замысла и участка</h3>
@@ -104,7 +116,10 @@
         </li>
         <li class="service-stage" id="stage-permits">
           <div class="stage-sign" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M5 3h9l4 4v6 M14 3v5h4 M5 3v18h8 M8 9h3 M8 13h5 M14 17l3 3 5-6"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M5 3h9l4 4v6 M14 3v5h4 M5 3v18h8 M8 9h3 M8 13h5"/>
+              <path class="stage-draw" pathLength="1" d="M14 17l3 3 5-6"/>
+            </svg>
             <span class="stage-number">02</span>
           </div>
           <h3>Изыскания и согласования</h3>
@@ -112,7 +127,10 @@
         </li>
         <li class="service-stage epc-design" id="stage-design">
           <div class="stage-sign" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 3h16v18H4z M8 17V8h8v6h-4v3z M8 6h8 M6 8v9"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M4 3h16v18H4z M8 6h8 M6 8v9"/>
+              <path class="stage-draw" pathLength="1" d="M8 17V8h8v6h-4v3z"/>
+            </svg>
             <span class="stage-number">03</span>
           </div>
           <h3>Проектирование</h3>
@@ -120,7 +138,10 @@
         </li>
         <li class="service-stage epc-procurement" id="stage-procurement">
           <div class="stage-sign" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M3 9l6-3 6 3v7l-6 3-6-3z M3 9l6 3 6-3 M9 12v7 M16 6h5v10h-3 M18 14l-2 2 2 2"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M3 9l6-3 6 3v7l-6 3-6-3z M3 9l6 3 6-3 M9 12v7"/>
+              <path class="stage-route" d="M14 5h8m-3-3 3 3-3 3"/>
+            </svg>
             <span class="stage-number">04</span>
           </div>
           <h3>Закупки и поставки</h3>
@@ -128,15 +149,21 @@
         </li>
         <li class="service-stage epc-construction" id="stage-build">
           <div class="stage-sign" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M3 20h18 M5 20V6h14v14 M5 11h14 M5 16h14 M12 6v14 M5 6l7-3 7 3"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M3 20h18 M5 20V6h14v14 M5 6l7-3 7 3"/>
+              <path class="stage-draw" pathLength="1" d="M12 20V6 M5 16h14 M5 11h14"/>
+            </svg>
             <span class="stage-number">05</span>
           </div>
           <h3>Строительство</h3>
           <p>Координируем подрядчиков и ведём строительный контроль. Следим за объёмами, качеством и сроками работ.</p>
         </li>
-        <li class="service-stage" id="stage-launch">
+        <li class="service-stage epc-construction" id="stage-launch">
           <div class="stage-sign" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 17a8 8 0 1 1 16 0H4z M12 13l4-4 M7 13l1 1 M12 8v1 M8 21h8"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path d="M4 17a8 8 0 1 1 16 0H4z M7 13l1 1 M12 8v1 M8 21h8"/>
+              <path class="stage-needle" d="M12 13l4-4"/>
+            </svg>
             <span class="stage-number">06</span>
           </div>
           <h3>Пусконаладка и ввод</h3>
