@@ -8,17 +8,28 @@
   <title>Что делаем — управление строительством | ГК Трикрон</title>
   <link rel="stylesheet" href="../projects/projects.css">
   <style>
+    .services-hero{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);align-items:center;gap:clamp(24px,5vw,68px)}
     .services-intro{font-size:clamp(17px,2vw,21px)}
-    .management,.services-contact{padding:clamp(20px,4vw,42px);background:#262b2f}
-    .management{margin-top:32px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.55fr);align-items:start;gap:12px 36px;border-left:2px solid var(--mint)}
+    .services-photo{display:block;border:1px solid var(--line);background:#262b2f}
+    .services-photo img{display:block;width:100%;height:auto;aspect-ratio:2;object-fit:cover}
+    .services-photo figcaption{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:12px;padding:12px 16px}
+    .services-photo strong,.services-photo small{display:block}
+    .services-photo small{color:var(--muted)}
+    .services-photo .arrow{color:var(--mint)}
+    .services-contact{padding:clamp(20px,4vw,42px);background:#262b2f}
     .management p,.service-stage p,.services-contact p{color:var(--muted)}
     .services h2{font:500 clamp(21px,2.75vw,34px)/1.2 Unbounded,sans-serif;letter-spacing:-.04em}
     .stage-heading{margin-top:clamp(38px,6vw,68px)}
-    .service-stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:20px 0 0}
-    .service-stage{padding:clamp(16px,2.5vw,28px);border:1px solid var(--line);scroll-margin-top:16px}
+    .management{margin-top:18px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:8px 24px;align-items:start;padding:14px 0}
+    .management h3{margin:0;color:var(--mint);font-size:19px}
+    .management .management-scope{margin-top:2px;color:var(--ink);font-size:14px}
+    .service-stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;padding:16px 0 0 16px;margin:0;border-top:1px solid var(--mint);border-left:1px solid var(--mint)}
+    .service-stage{position:relative;padding:clamp(16px,2.5vw,28px);border:1px solid var(--line);background:#262b2f;scroll-margin-top:16px}
     .service-stage:target{border-color:var(--mint)}
-    .stage-number{color:var(--mint);font:500 14px/1.5 Unbounded,sans-serif}
-    .service-stage h3{margin:8px 0 6px;font-size:clamp(18px,2vw,22px);line-height:1.25}
+    .stage-sign{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .stage-sign svg{width:36px;height:36px;color:var(--mint);fill:none;stroke:currentColor;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
+    .stage-number{color:var(--muted);font:500 13px/1.5 Unbounded,sans-serif}
+    .service-stage h3{margin:12px 0 6px;font-size:clamp(18px,2vw,22px);line-height:1.25}
     .services-contact{margin-top:clamp(38px,6vw,68px)}
     .services-contact p{margin-top:10px}
     .services-contact nav{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin-top:18px}
@@ -31,7 +42,9 @@
     }
     @media(max-width:660px){
       .services-header .wrap{flex-wrap:wrap;gap:0 14px;padding-block:6px}
-      .management,.service-stages{grid-template-columns:1fr}
+      .services-hero,.management,.service-stages{grid-template-columns:1fr}
+      .service-stages{padding-top:0;border-top:0}
+      .service-stage::before{content:"";position:absolute;left:-20px;top:30px;width:7px;height:7px;border-radius:50%;background:var(--mint)}
     }
   </style>
 </head>
@@ -50,44 +63,77 @@
     <nav class="breadcrumb" aria-label="Путь к странице">
       <a href="../index.html">Главная</a><span aria-hidden="true">/</span><span aria-current="page">Что делаем</span>
     </nav>
-    <h1>Что делаем</h1>
-    <p class="intro services-intro">Ведём строительный проект от оценки замысла до ввода объекта. Берём на себя функции технического заказчика, генерального проектировщика и генерального подрядчика.</p>
-
-    <section class="management" aria-labelledby="management-title">
-      <h2 id="management-title">Управление проектом</h2>
-      <p>Оцениваем экономику проекта, строим финансовую модель и помогаем выбрать схему финансирования. По принципу EPC увязываем проектирование, закупки и стройку единым графиком и управляем бюджетом, рисками и договорами.</p>
-    </section>
+    <div class="services-hero">
+      <div>
+        <h1>Что делаем</h1>
+        <p class="intro services-intro">Ведём строительный проект от оценки замысла до ввода объекта. Берём на себя функции технического заказчика, генерального проектировщика и генерального подрядчика.</p>
+      </div>
+      <a class="services-photo" href="../projects/khimki-49.html">
+        <figure>
+          <img src="../assets/khimki-49-loading.webp" width="1280" height="576" alt="Погрузочные ворота складского комплекса в Химках">
+          <figcaption>
+            <span><strong>Складской комплекс, Химки · участок 49</strong><small>Технический заказчик, генпроектировщик и генподрядчик</small></span>
+            <span class="arrow" aria-hidden="true"></span>
+          </figcaption>
+        </figure>
+      </a>
+    </div>
 
     <section class="stage-heading" aria-labelledby="stage-title">
       <h2 id="stage-title">Направления работ</h2>
+      <div class="management">
+        <div>
+          <h3>Управление проектом</h3>
+          <p class="management-scope">Бюджет · график · риски · договоры</p>
+        </div>
+        <p>Оцениваем экономику проекта, строим финансовую модель и помогаем выбрать схему финансирования. По принципу EPC связываем проектирование, закупки и стройку единым графиком.</p>
+      </div>
       <ol class="service-stages" role="list">
         <li class="service-stage" id="stage-site">
-          <span class="stage-number" aria-hidden="true">01</span>
+          <div class="stage-sign" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z M8 8h8v8H8z M2 5h4 M4 3v4 M18 19h4 M20 17v4"/></svg>
+            <span class="stage-number">01</span>
+          </div>
           <h3>Оценка замысла и участка</h3>
           <p>Проверяем, можно ли реализовать замысел на участке. Готовим эскиз и технико-экономическое обоснование.</p>
         </li>
         <li class="service-stage" id="stage-permits">
-          <span class="stage-number" aria-hidden="true">02</span>
+          <div class="stage-sign" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 3h9l4 4v6 M14 3v5h4 M5 3v18h8 M8 9h3 M8 13h5 M14 17l3 3 5-6"/></svg>
+            <span class="stage-number">02</span>
+          </div>
           <h3>Изыскания и согласования</h3>
           <p>Организуем изыскания, получение градостроительного плана участка и техусловий на подключение к сетям.</p>
         </li>
         <li class="service-stage" id="stage-design">
-          <span class="stage-number" aria-hidden="true">03</span>
+          <div class="stage-sign" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 3h16v18H4z M8 17V8h8v6h-4v3z M8 6h8 M6 8v9"/></svg>
+            <span class="stage-number">03</span>
+          </div>
           <h3>Проектирование</h3>
           <p>Разрабатываем проектную и рабочую документацию. Сопровождаем экспертизу и получение разрешения на строительство.</p>
         </li>
         <li class="service-stage" id="stage-procurement">
-          <span class="stage-number" aria-hidden="true">04</span>
+          <div class="stage-sign" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 9l6-3 6 3v7l-6 3-6-3z M3 9l6 3 6-3 M9 12v7 M16 6h5v10h-3 M18 14l-2 2 2 2"/></svg>
+            <span class="stage-number">04</span>
+          </div>
           <h3>Закупки и поставки</h3>
           <p>Проводим тендеры, заключаем договоры с поставщиками и увязываем поставки с графиком монтажа.</p>
         </li>
         <li class="service-stage" id="stage-build">
-          <span class="stage-number" aria-hidden="true">05</span>
+          <div class="stage-sign" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 20h18 M5 20V6h14v14 M5 11h14 M5 16h14 M12 6v14 M5 6l7-3 7 3"/></svg>
+            <span class="stage-number">05</span>
+          </div>
           <h3>Строительство</h3>
           <p>Координируем подрядчиков и ведём строительный контроль. Следим за объёмами, качеством и сроками работ.</p>
         </li>
         <li class="service-stage" id="stage-launch">
-          <span class="stage-number" aria-hidden="true">06</span>
+          <div class="stage-sign" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 17a8 8 0 1 1 16 0H4z M12 13l4-4 M7 13l1 1 M12 8v1 M8 21h8"/></svg>
+            <span class="stage-number">06</span>
+          </div>
           <h3>Пусконаладка и ввод</h3>
           <p>Организуем пусконаладку и испытания, сопровождаем получение разрешения на ввод и передачу объекта заказчику.</p>
         </li>
